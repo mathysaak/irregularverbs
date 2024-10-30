@@ -1,0 +1,334 @@
+:root {
+    --primary-color: #ff6b6b; /* Rojo Coral */
+    --secondary-color: #4ecdc4; /* Verde Menta */
+    --background-color: #f0f4f8; /* Azul Claro Suave */
+    --text-color: #2d3436;
+    --error-color: #d63031;
+    --card-background: #ffffff;
+    --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    --input-background: #e0e0e0; /* Fondo más oscuro para mejor visibilidad */
+    --input-text-color: #333; /* Texto más oscuro */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Transiciones más suaves */
+.lang-btn, .flag, button.conjugate, .result-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.container {
+    background-color: var(--card-background);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    max-width: 500px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.lang-btn {
+    border: none;
+    background: none;
+    font-size: 1rem;
+    margin: 0 0.3rem;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+}
+
+.flag {
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario y boton */
+.input-group {
+    display: flex;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    width: calc(100% - 1.6rem);
+    margin-bottom: 1rem;
+}
+
+button.conjugate {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+button.conjugate:hover {
+    background-color: #cf3f3f;
+    transform: translateY(-2px);
+}
+
+/* Resultados */
+.results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.result-item {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.result-item:hover {
+    transform: translateY(-3px);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+p {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.input-tense, .error {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.error {
+    color: var(--error-color);
+}
+
+.portfolio-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .results {
+        grid-template-columns: 1fr;
+    }
+
+    .language-selector {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .flag {
+        width: 30px;
+        height: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+    }
+
+    button.conjugate {
+        width: 100%;
+        border-radius: 50px;
+    }
+
+    .portfolio-link {
+        width: 40px;
+        height: 40px;
+    }
+}
+  
+/* Bandera de Argentina */
+.argentina {
+    background: linear-gradient(to bottom, #74ACDF 33%, #FFFFFF 33% 66%, #74ACDF 66%);
+    position: relative;
+    width: 40px; /* Tamaño reducido */
+    height: 25px; /* Mantiene proporciones */
+    margin: 5px;
+  }
+  
+  .argentina::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px; /* Sol ajustado */
+    height: 7px;
+    background-color: #FFD700;
+    border-radius: 50%;
+  }
+  
+  /* Bandera de Brasil */
+  .brasil {
+    background-color: #009C3B; /* Verde */
+    position: relative;
+    width: 40px; /* Tamaño reducido */
+    height: 25px; /* Proporción adecuada */
+    margin: 5px;
+  }
+  
+  .brasil::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 17px; /* Rombo proporcional */
+    height: 17px;
+    background-color: #FFDF00; /* Amarillo */
+  }
+  
+  .brasil::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12.5px; /* Círculo ajustado */
+    height: 12.5px;
+    background-color: #3E4095; /* Azul */
+    border-radius: 50%;
+  }
+  
+  /* Bandera de Estados Unidos */
+  .usa {
+    background: linear-gradient(to bottom, #B22234 14.3%, #FFFFFF 14.3% 28.6%, #B22234 28.6% 42.9%, 
+                                #FFFFFF 42.9% 57.2%, #B22234 57.2% 71.5%, #FFFFFF 71.5% 85.8%, 
+                                #B22234 85.8%);
+    position: relative;
+    width: 40px; /* Tamaño reducido */
+    height: 25px; /* Proporciones */
+    margin: 5px;
+  }
+  
+  .usa::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px; /* Cuadro azul más pequeño */
+    height: 10px;
+    background-color: #3C3B6E;
+    border-radius: 3px;
+  }
+  
+  .usa::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 14px; /* Ajustamos el patrón de estrellas */
+    height: 9px;
+    background-image: radial-gradient(circle, #FFFFFF 0.4px, transparent 0px);
+    background-size: 3px 3px; /* Estrellas más pequeñas */
+  }
+  
+  /* Bandera de Italia */
+  .italia {
+    background: linear-gradient(to right, #008C45 33%, #FFFFFF 33% 66%, #CD212A 66%);
+    width: 40px; /* Tamaño reducido */
+    height: 25px; /* Proporción adecuada */
+    margin: 5px;
+  }
+  
+  /* Ajuste para centrar las banderas */
+  .flag-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+ 
+  
+  
