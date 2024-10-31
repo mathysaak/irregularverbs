@@ -24,32 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const irregularVerbs = {
-        /* 'be': ['am/is/are', 'was/were', 'been'],
-        'go': ['go', 'went', 'gone'],
-        'do': ['do', 'did', 'done'],
-        'have': ['have', 'had', 'had'],
-        'say': ['say', 'said', 'said'],
-        'make': ['make', 'made', 'made'],
-        'get': ['get', 'got', 'gotten'],
-        'know': ['know', 'knew', 'known'],
-        'take': ['take', 'took', 'taken'],
-        'see': ['see', 'saw', 'seen'],
-        'come': ['come', 'came', 'come'],
-        'think': ['think', 'thought', 'thought'],
-        'look': ['look', 'looked', 'looked'],
-        'want': ['want', 'wanted', 'wanted'],
-        'give': ['give', 'gave', 'given'],
-        'use': ['use', 'used', 'used'],
-        'find': ['find', 'found', 'found'],
-        'tell': ['tell', 'told', 'told'],
-        'ask': ['ask', 'asked', 'asked'],
-        'work': ['work', 'worked', 'worked'],
-        'seem': ['seem', 'seemed', 'seemed'],
-        'feel': ['feel', 'felt', 'felt'],
-        'try': ['try', 'tried', 'tried'],
-        'leave': ['leave', 'left', 'left'],
-        'call': ['call', 'called', 'called'] */
-        
+  
         'be': ['am/is/are', 'was/were', 'been'],
         'go': ['go', 'went', 'gone'],
         'do': ['do', 'did', 'done'],
@@ -106,20 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const regularVerbs = [
-        /* 'walk', 'talk', 'play', 'study', 'live', 'love', 'hate', 'like', 'need', 'use',
-        'try', 'call', 'ask', 'answer', 'appear', 'happen', 'change', 'follow', 'stop', 'create',
-        'destroy', 'increase', 'decrease', 'produce', 'decide', 'continue', 'add', 'develop', 'receive',
-        'agree', 'support', 'explain', 'identify', 'remember', 'consider', 'expect', 'suggest',
-        'accept', 'reject', 'encourage', 'introduce', 'mention', 'offer', 'examine', 'depend',
-        'relate', 'base', 'reduce', 'indicate', 'imagine', 'recognize', 'join', 'carry',
-        'contain', 'reflect', 'achieve', 'supply', 'argue', 'arise', 'avoid', 'consist',
-        'constitute', 'establish', 'obtain', 'occur', 'participate', 'predict', 'prevent',
-        'respond', 'specify', 'vary', 'behave', 'eliminate', 'emerge', 'focus', 'illustrate',
-        'imply', 'improve', 'maintain', 'observe', 'perform', 'permit', 'react', 'remove',
-        'replace', 'reveal', 'shape', 'spread', 'survive', 'undertake', 'engage', 'enhance',
-        'evolve', 'exclude', 'facilitate', 'generate', 'ignore', 'link', 'locate', 'modify',
-        'monitor', 'neglect', 'possess', 'preserve', 'recover', 'rely', 'resist', 'retain' */
-        
+    
         'walk', 'talk', 'play', 'work', 'study', 'live', 'love', 'hate', 'like', 'want',
         'need', 'use', 'try', 'call', 'ask', 'answer', 'look', 'seem', 'feel', 'become',
         'remain', 'appear', 'happen', 'change', 'follow', 'stop', 'create', 'destroy',
@@ -307,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 baseForm: 'Base Form',// (Forma Base)
                 pastTense: 'Past Tense',// (Pretérito)
                 pastParticiple: 'Past Participle',// (Participio Pasado)
-                inputTense: 'Tiempo de entrada',
+                inputTense: 'Tiempo ingresado',
                 enterVerb: 'Ingrese un verbo'
             },
             pt: {
